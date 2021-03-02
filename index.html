@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Challenge</title>
+    <script src="jquery-3.5.1.min.js"></script>
+</head>
+<body>
+
+<button id="btn">Click to initiate calculation</button>
+
+
+ <script>
+
+        // let bmi = mass /Math.pow(height,2);
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("click", calc);
+        var bmi1;
+        var bmi2;
+        var mass;
+        var height;
+
+        function calc() {
+            let mass1 = prompt("Enter Mark's weight(mass)");
+            let height1 = prompt("Enter Mark's height(m)");
+            massConv = Number(mass1);
+            heightConv = Number(height1);
+            bmi1 = massConv/(heightConv * heightConv);
+
+            alert("Mark's BMI is: " + bmi1);
+
+            let mass2 = prompt("Enter John's weight(mass)");
+            let height2 = prompt("Enter John's height(m)");
+            massConv = Number(mass2);
+            heightConv = Number(height2);
+            bmi2 = massConv/(heightConv * heightConv);
+
+            alert("John's BMI is: " + bmi2);{
+                if (bmi1 > bmi2){
+            alert("Is Mark's BMI higher than John's? True");
+        }else if(bmi1 < bmi2){
+            alert("Is Mark's BMI higher than John's? False");
+        }else {
+            alert ("Both have the same BMI");
+        }
+            }
+
+       
+        }
+
+
+
+
+    </script>
+
+
+</body>
+</html>
